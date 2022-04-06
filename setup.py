@@ -13,7 +13,7 @@ LIST_OF_REQUIREMENTS = []
 setup(
     name=SRC_REPO,
     version="0.0.1",
-    author=Dipak Tripathi,
+    author="Dipak Tripathi",
     description="A small package for DVC",
     long_description=long_description,
     long_description_content_type="text/markdown",

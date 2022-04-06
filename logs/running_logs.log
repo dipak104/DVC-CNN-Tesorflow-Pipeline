@@ -1,0 +1,87 @@
+[2022-04-06 06:37:14,654: INFO: get_data]: 
+********************
+[2022-04-06 06:37:14,654: INFO: get_data]: >>>>> stage GET_DATA started <<<<<
+[2022-04-06 06:37:14,656: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-06 06:37:14,656: INFO: common]: YAML file successfully read from  params.yaml
+[2022-04-06 06:37:14,656: INFO: get_data]: >>>>> stage GET_DATA completed!<<<<<
+
+[2022-04-06 06:38:13,433: INFO: get_data]: 
+********************
+[2022-04-06 06:38:13,433: INFO: get_data]: >>>>> stage GET_DATA started <<<<<
+[2022-04-06 06:38:13,434: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-06 06:38:13,434: INFO: common]: YAML file successfully read from  params.yaml
+[2022-04-06 06:38:13,435: INFO: get_data]: >>>>> stage GET_DATA completed!<<<<<
+
+[2022-04-06 06:42:53,870: INFO: get_data]: 
+********************
+[2022-04-06 06:42:53,870: INFO: get_data]: >>>>> stage GET_DATA started <<<<<
+[2022-04-06 06:42:53,871: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-06 06:42:53,871: ERROR: get_data]: 'source_download_dir'
+Traceback (most recent call last):
+  File "src/get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config)
+  File "src/get_data.py", line 24, in get_data
+    source_download_dir = config["source_download_dir"]
+KeyError: 'source_download_dir'
+[2022-04-06 06:43:12,404: INFO: get_data]: 
+********************
+[2022-04-06 06:43:12,404: INFO: get_data]: >>>>> stage GET_DATA started <<<<<
+[2022-04-06 06:43:12,405: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-06 06:43:12,421: ERROR: get_data]: module 'os' has no attribute 'makedir'
+Traceback (most recent call last):
+  File "src/get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config)
+  File "src/get_data.py", line 28, in get_data
+    create_directory([local_data_dir])
+  File "c:\users\dipak\desktop\dvc_tensorflow\dvc-cnn-tesorflow-pipeline\src\utils\common.py", line 14, in create_directory
+    os.makedir(dir_path, exist_ok=True)
+AttributeError: module 'os' has no attribute 'makedir'
+[2022-04-06 06:43:36,337: INFO: get_data]: 
+********************
+[2022-04-06 06:43:36,338: INFO: get_data]: >>>>> stage GET_DATA started <<<<<
+[2022-04-06 06:43:36,339: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-06 06:43:36,354: ERROR: get_data]: expected str, bytes or os.PathLike object, not list
+Traceback (most recent call last):
+  File "src/get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config)
+  File "src/get_data.py", line 28, in get_data
+    create_directory([local_data_dir])
+  File "c:\users\dipak\desktop\dvc_tensorflow\dvc-cnn-tesorflow-pipeline\src\utils\common.py", line 14, in create_directory
+    os.makedirs(dir_path, exist_ok=True)
+  File "C:\Users\dipak\miniconda3\envs\dvc-project\lib\os.py", line 208, in makedirs
+    head, tail = path.split(name)
+  File "C:\Users\dipak\miniconda3\envs\dvc-project\lib\ntpath.py", line 183, in split
+    p = os.fspath(p)
+TypeError: expected str, bytes or os.PathLike object, not list
+[2022-04-06 06:44:14,301: INFO: get_data]: 
+********************
+[2022-04-06 06:44:14,301: INFO: get_data]: >>>>> stage GET_DATA started <<<<<
+[2022-04-06 06:44:14,302: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-06 06:44:14,318: INFO: common]: Created directory as : data/cat
+[2022-04-06 06:44:14,318: INFO: common]: Created directory as : data/dog
+[2022-04-06 06:44:14,419: INFO: common]: Copy of files Succeeded
+[2022-04-06 06:44:14,420: INFO: common]: Created directory as : data/cat
+[2022-04-06 06:44:14,420: INFO: common]: Created directory as : data/dog
+[2022-04-06 06:44:14,573: INFO: common]: Copy of files Succeeded
+[2022-04-06 06:44:14,574: INFO: get_data]: >>>>> stage GET_DATA completed!<<<<<
+
+[2022-04-06 06:46:06,631: INFO: get_data]: 
+********************
+[2022-04-06 06:46:06,632: INFO: get_data]: >>>>> stage GET_DATA started <<<<<
+[2022-04-06 06:46:06,633: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-06 06:46:06,648: INFO: common]: Created directory as : data/cat
+[2022-04-06 06:46:06,738: INFO: common]: Copy of files Succeeded
+[2022-04-06 06:46:06,738: INFO: common]: Created directory as : data/dog
+[2022-04-06 06:46:06,881: INFO: common]: Copy of files Succeeded
+[2022-04-06 06:46:06,882: INFO: get_data]: >>>>> stage GET_DATA completed!<<<<<
+
+[2022-04-06 06:49:45,236: INFO: get_data]: 
+********************
+[2022-04-06 06:49:45,236: INFO: get_data]: >>>>> stage GET_DATA started <<<<<
+[2022-04-06 06:49:45,237: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-06 06:49:45,253: INFO: common]: Created directory as : data/cat
+[2022-04-06 06:49:45,351: INFO: common]: Copy of files Succeeded
+[2022-04-06 06:49:45,351: INFO: common]: Created directory as : data/dog
+[2022-04-06 06:49:45,503: INFO: common]: Copy of files Succeeded
+[2022-04-06 06:49:45,505: INFO: get_data]: >>>>> stage GET_DATA completed!<<<<<
+
