@@ -1,9 +1,7 @@
 ### dependency
-tqdm
-dvc
-pandas
-numpy
-PyYAML
+tqdm==4.62.3
+dvc==2.7.2
+black==21.7b0
 tensorflow==2.5.0
 
 

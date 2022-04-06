@@ -85,3 +85,13 @@ TypeError: expected str, bytes or os.PathLike object, not list
 [2022-04-06 06:49:45,503: INFO: common]: Copy of files Succeeded
 [2022-04-06 06:49:45,505: INFO: get_data]: >>>>> stage GET_DATA completed!<<<<<
 
+[2022-04-06 08:40:36,126: INFO: get_data]: 
+********************
+[2022-04-06 08:40:36,126: INFO: get_data]: >>>>> stage GET_DATA started <<<<<
+[2022-04-06 08:40:36,127: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-06 08:40:36,142: INFO: common]: Created directory as : data/cat
+[2022-04-06 08:40:36,235: INFO: common]: Copy of files Succeeded
+[2022-04-06 08:40:36,235: INFO: common]: Created directory as : data/dog
+[2022-04-06 08:40:36,381: INFO: common]: Copy of files Succeeded
+[2022-04-06 08:40:36,382: INFO: get_data]: >>>>> stage GET_DATA completed!<<<<<
+

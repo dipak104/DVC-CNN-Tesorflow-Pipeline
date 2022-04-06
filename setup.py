@@ -7,12 +7,17 @@ with open("README.md", "r", encoding="utf-8") as f:
 REPO_NAME = "DEV-CNN-Tensorflow-Pipeline"
 AUTHOR_USER_NAME = "dipak104"
 SRC_REPO = "src"
-LIST_OF_REQUIREMENTS = []
+LIST_OF_REQUIREMENTS = [
+    "tqdm==4.62.3",
+    "dvc==2.7.2",
+    "black==21.7b0",
+    "tensorflow==2.5.0"
+]
 
 
 setup(
     name=SRC_REPO,
-    version="0.0.1",
+    version="0.0.2",
     author="Dipak Tripathi",
     description="A small package for DVC",
     long_description=long_description,
