@@ -95,3 +95,107 @@ TypeError: expected str, bytes or os.PathLike object, not list
 [2022-04-06 08:40:36,381: INFO: common]: Copy of files Succeeded
 [2022-04-06 08:40:36,382: INFO: get_data]: >>>>> stage GET_DATA completed!<<<<<
 
+[2022-04-07 07:26:06,058: INFO: prepare_base_model]: 
+********************
+[2022-04-07 07:26:06,059: INFO: prepare_base_model]: >>>>> stage PREPARE BASE MODEL started <<<<<
+[2022-04-07 07:26:06,061: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-07 07:26:06,063: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-07 07:26:06,063: INFO: common]: Created directory as : artifacts\base_model
+[2022-04-07 07:26:06,063: ERROR: prepare_base_model]: name 'o' is not defined
+Traceback (most recent call last):
+  File "src/prepare_base_model.py", line 56, in <module>
+    prepare_base_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/prepare_base_model.py", line 32, in prepare_base_model
+    base_model_path = o.path.join(base_model_dir_path, base_model_name)
+NameError: name 'o' is not defined
+[2022-04-07 07:26:19,322: INFO: prepare_base_model]: 
+********************
+[2022-04-07 07:26:19,322: INFO: prepare_base_model]: >>>>> stage PREPARE BASE MODEL started <<<<<
+[2022-04-07 07:26:19,325: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-07 07:26:19,327: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-07 07:26:19,327: INFO: common]: Created directory as : artifacts\base_model
+[2022-04-07 07:26:19,327: ERROR: prepare_base_model]: 'IMAGE_SIZE'
+Traceback (most recent call last):
+  File "src/prepare_base_model.py", line 56, in <module>
+    prepare_base_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/prepare_base_model.py", line 34, in prepare_base_model
+    base_model = get_VGG16_model(input_shape=params["IMAGE_SIZE"], model_path=base_model_path)
+KeyError: 'IMAGE_SIZE'
+[2022-04-07 07:27:21,203: INFO: prepare_base_model]: 
+********************
+[2022-04-07 07:27:21,203: INFO: prepare_base_model]: >>>>> stage PREPARE BASE MODEL started <<<<<
+[2022-04-07 07:27:21,206: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-07 07:27:21,207: INFO: common]: YAML file successfully read from  params.yaml
+[2022-04-07 07:27:21,207: INFO: common]: Created directory as : artifacts\base_model
+[2022-04-07 07:27:47,363: WARNING: saving_utils]: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2022-04-07 07:27:47,437: INFO: model]: VGG16 model saved at: artifacts\base_model\base_model.h5
+[2022-04-07 07:27:47,438: ERROR: prepare_base_model]: module 'tensorflow.keras.layers' has no attribute 'flatten'
+Traceback (most recent call last):
+  File "src/prepare_base_model.py", line 56, in <module>
+    prepare_base_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/prepare_base_model.py", line 36, in prepare_base_model
+    full_model = prepare_full_model(base_model, learning_rate=params["LEARNING_RATE"], CLASSES=2, freeze_all=True, freeze_till=None)
+  File "c:\users\dipak\desktop\dvc_tensorflow\dvc-cnn-tesorflow-pipeline\src\utils\model.py", line 28, in prepare_full_model
+    flatten_in = tf.keras.layers.flatten()(base_mode.output)
+AttributeError: module 'tensorflow.keras.layers' has no attribute 'flatten'
+[2022-04-07 07:28:37,584: INFO: prepare_base_model]: 
+********************
+[2022-04-07 07:28:37,584: INFO: prepare_base_model]: >>>>> stage PREPARE BASE MODEL started <<<<<
+[2022-04-07 07:28:37,586: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-07 07:28:37,587: INFO: common]: YAML file successfully read from  params.yaml
+[2022-04-07 07:28:37,588: INFO: common]: Created directory as : artifacts\base_model
+[2022-04-07 07:28:38,073: WARNING: saving_utils]: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2022-04-07 07:28:38,142: INFO: model]: VGG16 model saved at: artifacts\base_model\base_model.h5
+[2022-04-07 07:28:38,143: ERROR: prepare_base_model]: name 'base_mode' is not defined
+Traceback (most recent call last):
+  File "src/prepare_base_model.py", line 56, in <module>
+    prepare_base_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/prepare_base_model.py", line 36, in prepare_base_model
+    full_model = prepare_full_model(base_model, learning_rate=params["LEARNING_RATE"], CLASSES=2, freeze_all=True, freeze_till=None)
+  File "c:\users\dipak\desktop\dvc_tensorflow\dvc-cnn-tesorflow-pipeline\src\utils\model.py", line 28, in prepare_full_model
+    flatten_in = tf.keras.layers.Flatten()(base_mode.output)
+NameError: name 'base_mode' is not defined
+[2022-04-07 07:28:51,047: INFO: prepare_base_model]: 
+********************
+[2022-04-07 07:28:51,047: INFO: prepare_base_model]: >>>>> stage PREPARE BASE MODEL started <<<<<
+[2022-04-07 07:28:51,050: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-07 07:28:51,051: INFO: common]: YAML file successfully read from  params.yaml
+[2022-04-07 07:28:51,051: INFO: common]: Created directory as : artifacts\base_model
+[2022-04-07 07:28:51,530: WARNING: saving_utils]: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2022-04-07 07:28:51,599: INFO: model]: VGG16 model saved at: artifacts\base_model\base_model.h5
+[2022-04-07 07:28:51,618: INFO: model]: Custom model is compiled and ready to train
+[2022-04-07 07:28:51,638: ERROR: prepare_base_model]: name 'artifaccts' is not defined
+Traceback (most recent call last):
+  File "src/prepare_base_model.py", line 56, in <module>
+    prepare_base_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/prepare_base_model.py", line 38, in prepare_base_model
+    updated_full_model_path  = os.path.join(base_model_dir_path, artifaccts["UPDATED_BASE_MODEL_NAME"])
+NameError: name 'artifaccts' is not defined
+[2022-04-07 07:29:04,610: INFO: prepare_base_model]: 
+********************
+[2022-04-07 07:29:04,611: INFO: prepare_base_model]: >>>>> stage PREPARE BASE MODEL started <<<<<
+[2022-04-07 07:29:04,613: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-07 07:29:04,614: INFO: common]: YAML file successfully read from  params.yaml
+[2022-04-07 07:29:04,615: INFO: common]: Created directory as : artifacts\base_model
+[2022-04-07 07:29:05,103: WARNING: saving_utils]: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2022-04-07 07:29:05,173: INFO: model]: VGG16 model saved at: artifacts\base_model\base_model.h5
+[2022-04-07 07:29:05,193: INFO: model]: Custom model is compiled and ready to train
+[2022-04-07 07:29:05,213: ERROR: prepare_base_model]: name 'updated_base_model_path' is not defined
+Traceback (most recent call last):
+  File "src/prepare_base_model.py", line 56, in <module>
+    prepare_base_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/prepare_base_model.py", line 40, in prepare_base_model
+    full_model.save(updated_base_model_path)
+NameError: name 'updated_base_model_path' is not defined
+[2022-04-07 07:29:27,237: INFO: prepare_base_model]: 
+********************
+[2022-04-07 07:29:27,237: INFO: prepare_base_model]: >>>>> stage PREPARE BASE MODEL started <<<<<
+[2022-04-07 07:29:27,240: INFO: common]: YAML file successfully read from  configs/config.yaml
+[2022-04-07 07:29:27,241: INFO: common]: YAML file successfully read from  params.yaml
+[2022-04-07 07:29:27,241: INFO: common]: Created directory as : artifacts\base_model
+[2022-04-07 07:29:27,724: WARNING: saving_utils]: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2022-04-07 07:29:27,794: INFO: model]: VGG16 model saved at: artifacts\base_model\base_model.h5
+[2022-04-07 07:29:27,813: INFO: model]: Custom model is compiled and ready to train
+[2022-04-07 07:29:27,916: INFO: prepare_base_model]: Full Untrained model is saved at artifacts\base_model\updated_base_model.h5
+[2022-04-07 07:29:27,917: INFO: prepare_base_model]: >>>>> stage PREPARE BASE MODEL Completed! Base model saved<<<<<
+
