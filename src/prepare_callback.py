@@ -3,7 +3,7 @@ import os
 from tqdm import tqdm
 import logging
 from src.utils.common import read_yaml, create_directory
-#from src.utils.callbacks import create_and_save_tensorboard_callbacks, create_and_save_checkpoint_callbacks
+from src.utils.callbacks import create_and_save_tensorboard_callbacks, create_and_save_checkpoint_callbacks
 import random
 import time
 
@@ -32,8 +32,8 @@ def prepare_callbacks(config_path):
 
     create_directory([tensorboard_log_dir, checkpoint_dir, callbacks_dir])
 
-    #create_and_save_tensorboard_callbacks(callbacks_dir, tensorboard_log_dir)
-    #create_and_save_checkpoint_callbacks(callbacks_dir)
+    create_and_save_tensorboard_callbacks(callbacks_dir, tensorboard_log_dir)
+    create_and_save_checkpoint_callbacks(callbacks_dir, checkpoint_dir)
 
 
 
