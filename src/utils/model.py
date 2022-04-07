@@ -58,7 +58,13 @@ def prepare_full_model(base_model, learning_rate, CLASSES=2, freeze_all=True, fr
 
     #full_model.summary()
 
-    
+
     logging.info(f"Full model summary {_get_model_summary(full_model)}")
 
     return full_model
+
+def load_full_model(untrained_full_model_path: str) -> tf.keras.models.Model:
+    model = tf.keras.models.load_model(untrained_full_model_path)
+    logging.info(f"Untrained model is loaded from: {untrained_full_model_path}")
+    logging.info(f"Untrained Full model summary: \n{_get_model_summary(model)}")
+    return model
