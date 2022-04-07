@@ -2,6 +2,7 @@ import yaml
 import logging
 import os
 import shutil
+import time
 
 def read_yaml(filepath: str) -> dict:
     with open(filepath) as yaml_file:
@@ -25,3 +26,8 @@ def copy_files(source_download_dir: str, local_data_dir: str) -> None:
         shutil.copy(src, dest)
 
     logging.info(f"Copy of files Succeeded")
+
+def get_timestamp(name: str) -> str:
+    timestamp = time.asctime().replace(' ','_').replace(':','.')
+    unique_name = f"{name}_at_{timestamp}"
+    return unique_name
