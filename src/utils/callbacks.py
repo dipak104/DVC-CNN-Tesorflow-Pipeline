@@ -26,7 +26,7 @@ def create_and_save_checkpoint_callbacks(callbacks_dir: str, checkpoint_dir: str
         filepath=checkpoint_file,
         save_best_only=True
     )
-    ckpt_callback_filepath = os.path.join(callbacks_dir, "tensorboard_cb.cb")
+    ckpt_callback_filepath = os.path.join(callbacks_dir, "checkpoint_cb.cb")
     joblib.dump(checkpoint_callback, ckpt_callback_filepath)
 
     logging.info(f"Checkpoint callback is saved at {ckpt_callback_filepath} as binary file")
