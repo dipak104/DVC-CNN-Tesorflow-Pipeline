@@ -1,5 +1,14 @@
 import tensorflow as tf
 import logging
+import io
+
+def _get_model_summary(model):
+    with io.StringIO() as stream:
+        model.summary(
+            print_fn = lambda x: stream.write(f"{x}\n")
+        )
+        summary = stream.getvalue()
+    return summary
 
 
 def get_VGG16_model(input_shape: list, model_path: str) -> tf.keras.models.Model:
@@ -12,6 +21,7 @@ def get_VGG16_model(input_shape: list, model_path: str) -> tf.keras.models.Model
     #     tf.python.keras.engine.functional.Functional: Return Type
     # """
     model = tf.keras.applications.vgg16.VGG16(input_shape=input_shape, weights='imagenet', include_top=False)
+    logging.info(f"VGG16 model summary : {_get_model_summary(model)}")
     model.save(model_path)
     logging.info(f"VGG16 model saved at: {model_path}")
     return model
@@ -46,6 +56,9 @@ def prepare_full_model(base_model, learning_rate, CLASSES=2, freeze_all=True, fr
 
     logging.info(f"Custom model is compiled and ready to train")
 
-    full_model.summary()
+    #full_model.summary()
+
+    
+    logging.info(f"Full model summary {_get_model_summary(full_model)}")
 
     return full_model
