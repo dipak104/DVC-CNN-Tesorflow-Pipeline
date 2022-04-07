@@ -2,6 +2,7 @@
 
 artifacts:
   ARTIFACTS_DIR: artifacts
+  DATA_DIR: data
   TRAINED_MODEL_DIR: model
   BASE_MODEL_DIR: base_model
   BASE_MODEL_NAME: base_model.h5
